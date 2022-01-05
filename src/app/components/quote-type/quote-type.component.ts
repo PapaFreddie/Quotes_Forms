@@ -8,7 +8,7 @@ import { Quote } from '../../Quote'
   styleUrls: ['./quote-type.component.css']
 })
 export class QuoteTypeComponent implements OnInit {
-  @Input() quote: Quote | undefined;
+  @Input() quote!: Quote;
 
   constructor() { }
 

@@ -14,7 +14,9 @@ export class HeaderComponent implements OnInit {
 
 
 
-  constructor(private uiService: UiService) { }
+  constructor(private uiService: UiService) { 
+    this.subscription = this.uiService.onToggle().subscribe(value => this.showAddQuote = value)
+  }
 
   ngOnInit(): void {
   }

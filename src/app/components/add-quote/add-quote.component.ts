@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { UiService } from 'src/app/services/ui.service';
 import { Quote } from '../../Quote'
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-add-quote',
@@ -11,8 +13,13 @@ export class AddQuoteComponent implements OnInit {
   text!: string;
   author!: string;
   inspirational: boolean = false;
+  showAddQuote!: boolean;
+  subscription: Subscription;
 
-  constructor() { }
+  constructor(private uiService: UiService) { 
+    this.subscription = this.uiService.onToggle().subscribe(value => this.showAddQuote = value)
+
+  }
 
   ngOnInit(): void {
   }

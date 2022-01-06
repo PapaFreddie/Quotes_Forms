@@ -1,4 +1,4 @@
 <header>
-    <h3>{{title}}</h3>
-    <app-button color="blue" text="Add Quote" (btnClick)="toggleAddQuote()"></app-button>
+    <h1>{{title}}</h1>
+    <app-button color="{{showAddQuote ? 'red' : 'blue' }}" text="{{showAddQuote ? 'Close' : 'Add Quote' }}" (btnClick)="toggleAddQuote()"></app-button>
 </header>

@@ -12,10 +12,15 @@ import { ButtonComponent } from './components/button/button.component';
 import { QuotesComponent } from './components/quotes/quotes.component';
 import { QuoteTypeComponent } from './components/quote-type/quote-type.component';
 import { AddQuoteComponent } from './components/add-quote/add-quote.component';
+import { AboutComponent } from './components/about/about.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes: Routes = [
   {
     path: '', component: QuotesComponent
+  },
+  {
+    path: 'about', component: AboutComponent
   }
 ]
 
@@ -27,6 +32,8 @@ const appRoutes: Routes = [
     QuotesComponent,
     QuoteTypeComponent,
     AddQuoteComponent,
+    AboutComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

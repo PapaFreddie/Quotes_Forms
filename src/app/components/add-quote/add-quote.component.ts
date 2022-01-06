@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-quote.component.css']
 })
 export class AddQuoteComponent implements OnInit {
+  text!: string;
+  author!: string;
+  inspirational: boolean = false;
 
   constructor() { }
 
